@@ -1,0 +1,38 @@
+/* CSS declarations go here */
+
+
+
+
+
+.word
+{
+    padding-top:80px;
+}
+
+.word h1
+{
+    font-family: 'Pinyon Script', cursive;
+    color:#f24730;
+    font-size:160px;
+    text-align:center;
+    min-height:100px;
+    padding-top:40px;
+    text-shadow: rgba(64, 64, 64, 0.496094) 5px 5px 5px;
+}
+
+body
+{
+    background-color:#b4ddde
+}
+
+.disco
+{
+    padding:2px;
+    padding-bottom:5px;
+}
+.disco div
+{
+    min-height:40px;
+    min-width: 40px;
+    border-radius: 3px;
+}

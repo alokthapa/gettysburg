@@ -1,0 +1,36 @@
+<head>
+  <title>gettysburg</title>
+</head>
+
+<body >
+  <div class="container">
+    {{> address}}
+  </div>
+</body>
+
+
+<template name="words">
+  <div class="word">
+    <h1>{{word}}</h1>
+  </div>
+</template>
+
+<template name="address">
+{{> words}}
+<div class="main-disco">
+{{#each blocks}}
+  <div class="row-fluid disco">
+    {{#each this}}
+     <div class="span1" style="background-color:{{this}}"></div>
+    {{/each}}
+  </div>
+ {{/each}}
+</div>
+</template>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{greeting}}
+  <input type="button" value="Click" />
+  
+</template>
