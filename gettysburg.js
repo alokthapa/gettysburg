@@ -86,7 +86,7 @@ var shiftColumns = function ()
 
 
 
-var animate = function(height, current, up)
+var animate = function(word, height, current, up)
 {
 //    console.log("current height: " + height);
 //    console.log("current current: " + current);
@@ -111,7 +111,13 @@ var animate = function(height, current, up)
 
     if (height === current)
     {
-        if (up){ up = false;current--}
+        if (up)
+        { 
+            up = false;
+            current--;
+            Session.set("word", word);
+
+        }
     }
     else
     {
@@ -129,7 +135,7 @@ var animate = function(height, current, up)
     }
     else
     {
-        Meteor.setTimeout(function(){animate(height, current, up)}, delay);
+        Meteor.setTimeout(function(){animate(word, height, current, up)}, delay);
     }
 
 
@@ -145,8 +151,7 @@ var animategettys = function()
         {
             var word = splitgettys[0];
             console.log("now animating " + word);
-            Session.set("word", word);
-            animate(word.length, 0, true);
+            animate(word, word.length, 0, true);
         }
 }
 
