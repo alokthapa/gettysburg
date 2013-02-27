@@ -33,7 +33,7 @@ var shiftarray =  function (ary )
 var delay = 150;
 var blocksize = 12;
 var mid = 7;
-var original = "#302eb8";
+var original = "#b4ddde";
 var mix = "#f24730";
 var blocks = makematrix(blocksize+1,blocksize,original);
 
